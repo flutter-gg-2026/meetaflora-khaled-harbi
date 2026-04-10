@@ -1,0 +1,14 @@
+{
+  "plants": [
+    {
+      "id": "1",
+      "title": "Monstera Deliciosa",
+      "image_url": "https://images.unsplash.com/photo-1614594975525-e45190c55d40"
+    },
+    {
+      "id": "2",
+      "title": "Snake Plant",
+      "image_url": "https://images.unsplash.com/photo-1593482892290-f54927ae1c7e"
+    }
+  ]
+}
