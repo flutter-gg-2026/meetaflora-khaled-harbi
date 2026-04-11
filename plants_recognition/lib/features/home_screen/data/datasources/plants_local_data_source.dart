@@ -13,6 +13,9 @@ abstract class BaseHomeScreenLocalDataSource {
 class HomeScreenLocalDataSource implements BaseHomeScreenLocalDataSource {
   HomeScreenLocalDataSource();
 
+  // ====================================================================
+  // ====================================================================
+
   @override
   Future<List<PlantModel>> getPlants() async {
     try {
@@ -30,9 +33,13 @@ class HomeScreenLocalDataSource implements BaseHomeScreenLocalDataSource {
           .map((plant) => PlantModel.fromJson(plant as Map<String, dynamic>))
           .toList();
 
+      //TODO: create another model to pass the plants to
       return plants;
     } catch (error) {
       throw FailureExceptions.getException(error);
     }
   }
+
+  // ====================================================================
+  // ====================================================================
 }

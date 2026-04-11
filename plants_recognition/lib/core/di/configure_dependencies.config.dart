@@ -9,6 +9,7 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:dio/dio.dart' as _i361;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i558;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:get_storage/get_storage.dart' as _i792;
@@ -28,6 +29,7 @@ extension GetItInjectableX on _i174.GetIt {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final thirdPartyConfig = _$ThirdPartyConfig();
     gh.lazySingleton<_i792.GetStorage>(() => thirdPartyConfig.storage);
+    gh.lazySingleton<_i361.Dio>(() => thirdPartyConfig.dio);
     gh.lazySingleton<_i454.SupabaseClient>(
       () => thirdPartyConfig.supabaseClient,
     );

@@ -15,6 +15,9 @@ abstract class PlantModel with _$PlantModel {
       _$PlantModelFromJson(json);
 }
 
+// ====================================================================
+// ====================================================================
+
 extension PlantModelMapper on PlantModel {
   PlantEntity toEntity() {
     return PlantEntity(id: id, title: title, imageURL: imageURL);

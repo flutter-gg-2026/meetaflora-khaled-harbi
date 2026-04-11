@@ -2,6 +2,7 @@ import 'package:get_it/get_it.dart';
 import 'package:plants_recognition/core/di/configure_dependencies.config.dart';
 import 'package:injectable/injectable.dart';
 import 'package:plants_recognition/features/home_screen/di/home_screen_di.dart';
+import 'package:plants_recognition/features/plant_information/di/plant_information_di.dart';
 
 @InjectableInit(
   initializerName: 'init', 
@@ -14,4 +15,5 @@ Future<void> configureDependencies() async {
   final getIt = GetIt.instance;
   getIt.init();
     configureHomeScreen(getIt);
+    configurePlantInformation(getIt);
 }

@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:injectable/injectable.dart';
@@ -10,6 +11,9 @@ abstract class ThirdPartyConfig {
   GetStorage get storage => GetStorage();
   //----------------------------------------------------------------------------
   @lazySingleton
+  Dio get dio => Dio();
+  //----------------------------------------------------------------------------
+  @lazySingleton
   SupabaseClient get supabaseClient => Supabase.instance.client;
   //----------------------------------------------------------------------------
   AndroidOptions _getAndroidOptions() =>
@@ -19,4 +23,3 @@ abstract class ThirdPartyConfig {
       FlutterSecureStorage(aOptions: _getAndroidOptions());
   //----------------------------------------------------------------------------
 }
-

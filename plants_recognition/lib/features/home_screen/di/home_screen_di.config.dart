@@ -11,8 +11,6 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
-import 'package:plants_recognition/features/home_screen/data/datasources/home_screen_remote_data_source.dart'
-    as _i171;
 import 'package:plants_recognition/features/home_screen/data/datasources/plants_local_data_source.dart'
     as _i982;
 import 'package:plants_recognition/features/home_screen/data/repositories/home_screen_repository_data.dart'
@@ -32,12 +30,8 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i982.BaseHomeScreenLocalDataSource>(
       () => _i982.HomeScreenLocalDataSource(),
     );
-    gh.lazySingleton<_i171.BaseHomeScreenRemoteDataSource>(
-      () => _i171.HomeScreenRemoteDataSource(),
-    );
     gh.lazySingleton<_i331.HomeScreenRepositoryDomain>(
       () => _i537.HomeScreenRepositoryData(
-        gh<_i171.BaseHomeScreenRemoteDataSource>(),
         gh<_i982.BaseHomeScreenLocalDataSource>(),
       ),
     );

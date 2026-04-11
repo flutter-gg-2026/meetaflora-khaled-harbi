@@ -1,6 +1,8 @@
 import 'package:any_image_view/any_image_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:plants_recognition/core/navigation/routers.dart';
 import 'package:plants_recognition/features/home_screen/presentation/cubit/home_screen_cubit.dart';
 import 'package:plants_recognition/features/home_screen/presentation/cubit/home_screen_state.dart';
 
@@ -11,16 +13,15 @@ class HomeScreenFeatureScreen extends StatelessWidget {
     // to trigger events
     final _ = context.read<HomeScreenCubit>();
     return Scaffold(
-      appBar: AppBar(title: const Text('HomeScreen Feature Screen')),
+      appBar: AppBar(title: const Text('Plants')),
       body: BlocBuilder<HomeScreenCubit, HomeScreenState>(
         builder: (context, state) {
-          print(state);
           switch (state) {
             case HomeScreenInitialState _:
               return const Center(child: CircularProgressIndicator());
             case HomeScreenErrorState _:
               return Center(child: CircularProgressIndicator());
-            case HomeScreenLoadPlants _:
+            case HomeScreenLoadPlantsState _:
               // no need to trigger event here because it was triggered in navigation
               return GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -43,6 +44,12 @@ class HomeScreenFeatureScreen extends StatelessWidget {
                                 // Expand to fill all available width from the parent
                                 width: double.infinity,
                                 borderRadius: .circular(8),
+                                onTap: () {
+                                  context.push(
+                                    Routes.plantInformation,
+                                    extra: state.plants[index],
+                                  );
+                                },
                               ),
                             ),
                           ),

@@ -2,7 +2,7 @@
   "plants": [
     {
       "id": "1",
-      "title": "Monstera Deliciosa",
+      "title": "Monstera Deliciosa Plant",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Monstera_deliciosa.jpg"
     },
     {
@@ -17,12 +17,12 @@
     },
     {
       "id": "4",
-      "title": "Aloe Vera",
+      "title": "Aloe Vera Plant",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Aloe_vera.jpg"
     },
     {
       "id": "5",
-      "title": "Fiddle Leaf Fig",
+      "title": "Fiddle Leaf Fig Plant",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Ficus_lyrata.jpg"
     },
     {
@@ -37,12 +37,12 @@
     },
     {
       "id": "8",
-      "title": "Philodendron Birkin",
+      "title": "Philodendron Birkin Plant",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Philodendron_birkin-3-RM_Nagar-bangalore-India.jpg"
     },
     {
       "id": "9",
-      "title": "English Ivy",
+      "title": "English Ivy Plant",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Hedera_helix.jpg"
     },
     {
@@ -52,12 +52,12 @@
     },
     {
       "id": "11",
-      "title": "Lavender",
+      "title": "Lavender Plant",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Lavandula_angustifolia_003.JPG"
     },
     {
       "id": "12",
-      "title": "Bird of Paradise",
+      "title": "Bird of Paradise Plant",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Bird_of_Paradise_(Strelitzia_Reginae).jpg"
     }
   ]

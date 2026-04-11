@@ -8,7 +8,27 @@ abstract class HomeScreenState extends Equatable {
   List<Object?> get props => [];
 }
 
+// ====================================================================
+
 class HomeScreenInitialState extends HomeScreenState {}
+
+// ====================================================================
+
+class HomeScreenLoadPlantsState extends HomeScreenState {
+  final List<PlantEntity> plants;
+
+  const HomeScreenLoadPlantsState({required this.plants});
+}
+
+// ====================================================================
+
+class HomeScreenFetchDescriptionState extends HomeScreenState {
+  final String description;
+
+  const HomeScreenFetchDescriptionState({required this.description});
+}
+
+// ====================================================================
 
 class HomeScreenErrorState extends HomeScreenState {
   final String message;
@@ -20,10 +40,4 @@ class HomeScreenErrorState extends HomeScreenState {
   // helps with rebuilding the UI WHEN THE DATA CHANGES only
   @override
   List<Object?> get props => [message];
-}
-
-class HomeScreenLoadPlants extends HomeScreenState {
-  final List<PlantEntity> plants;
-
-  const HomeScreenLoadPlants({required this.plants});
 }
