@@ -8,7 +8,6 @@ import 'core/navigation/app_router.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   await EasyLocalization.ensureInitialized();
   await setup();
   await configureDependencies();
