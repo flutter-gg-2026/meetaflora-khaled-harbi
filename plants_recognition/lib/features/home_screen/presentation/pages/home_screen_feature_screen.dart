@@ -28,11 +28,29 @@ class HomeScreenFeatureScreen extends StatelessWidget {
                 ),
                 itemCount: state.plants.length,
                 itemBuilder: (context, index) {
-                  return Card(
+                  return Padding(
+                    padding: const EdgeInsets.all(8),
                     child: Column(
                       children: [
-                        AnyImageView(imagePath: state.plants[index].imageURL),
-                        Text(state.plants[index].title),
+                        // Take all the remaining available space inside a Row or Column
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8),
+                            child: Card(
+                              child: AnyImageView(
+                                imagePath: state.plants[index].imageURL,
+                                fit: .cover,
+                                // Expand to fill all available width from the parent
+                                width: double.infinity,
+                                borderRadius: .circular(8),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Text(
+                          state.plants[index].title,
+                          style: TextStyle(fontWeight: .bold),
+                        ),
                       ],
                     ),
                   );
