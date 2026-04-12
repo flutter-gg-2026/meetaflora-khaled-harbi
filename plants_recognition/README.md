@@ -9,9 +9,22 @@ A robust, beautifully designed Flutter application that allows users to browse a
 * **Plant Catalog (Screen 1):** A clean, responsive list displaying plant images and their common names.
 * **Plant Details (Screen 2):** A detailed view of the selected plant.
 * **AI-Powered Insights:** A "More Information" feature that integrates the **Gemini API**. By sending the plant's title and image to the AI, the app retrieves and elegantly displays rich, dynamically generated botanical information.
-* **Robust Error Handling:** Comprehensive state management that gracefully handles API exceptions, including rate limiting (e.g., `Too Many Requests` failures) during Gemini API calls.
+* **Robust Error Handling:** Comprehensive state management that gracefully handles API exceptions during Gemini API calls.
 
 ---
+## 4. 📸 Screenshots
+
+Here is a look at the Plant AI Explorer in action:
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/50d3cab7-6732-4bb8-9ad4-ce5c5181285f" alt="Plant Catalog List View" width="18%">
+  <img src="https://github.com/user-attachments/assets/8a9b1b81-ede5-4f6b-a84e-9c22b39e69da" alt="Plant Catalog List View in dark" width="18%">
+  <img src="https://github.com/user-attachments/assets/a48fe2e0-2922-4889-bc09-0ec3b9c62ec3" alt="Plant Details View" width="18%">
+  <img src="https://github.com/user-attachments/assets/c0ed5939-d4c9-4b3b-bd65-ad6b6ecc36b7" alt="Gemini AI Insights Result" width="18%">
+</div>
+
+---
+<img width="1320" height="2868" alt="home_screen_dark" src="https://github.com/user-attachments/assets/8a9b1b81-ede5-4f6b-a84e-9c22b39e69da" />
 
 ## 🛠️ Tech Stack & Libraries
 
