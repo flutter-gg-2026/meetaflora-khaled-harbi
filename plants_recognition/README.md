@@ -24,8 +24,6 @@ Here is a look at the Plant AI Explorer in action:
 </div>
 
 ---
-<img width="1320" height="2868" alt="home_screen_dark" src="https://github.com/user-attachments/assets/8a9b1b81-ede5-4f6b-a84e-9c22b39e69da" />
-
 ## 🛠️ Tech Stack & Libraries
 
 This app is built using modern Flutter best practices and relies on the following core packages:
