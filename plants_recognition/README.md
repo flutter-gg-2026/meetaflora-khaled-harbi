@@ -12,7 +12,7 @@ A robust, beautifully designed Flutter application that allows users to browse a
 * **Robust Error Handling:** Comprehensive state management that gracefully handles API exceptions during Gemini API calls.
 
 ---
-## 4. 📸 Screenshots
+##  📸 Screenshots
 
 Here is a look at the Plant AI Explorer in action:
 
