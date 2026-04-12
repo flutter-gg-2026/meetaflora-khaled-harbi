@@ -33,7 +33,7 @@ class HomeScreenLocalDataSource implements BaseHomeScreenLocalDataSource {
           .map((plant) => PlantModel.fromJson(plant as Map<String, dynamic>))
           .toList();
 
-      //TODO: create another model to pass the plants to
+      // Return directly or create a new model for plants
       return plants;
     } catch (error) {
       throw FailureExceptions.getException(error);

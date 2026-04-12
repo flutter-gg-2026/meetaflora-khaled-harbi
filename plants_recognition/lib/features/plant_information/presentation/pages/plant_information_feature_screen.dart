@@ -14,7 +14,9 @@ class PlantInformationFeatureScreen extends StatelessWidget {
     final cubit = context.read<PlantInformationCubit>();
 
     return Scaffold(
-      appBar: AppBar(title: const Text('About')),
+      appBar: AppBar(
+        title: const Text('About', style: TextStyle(fontSize: 24)),
+      ),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: .start,
@@ -40,7 +42,14 @@ class PlantInformationFeatureScreen extends StatelessWidget {
                       onPressed: () {
                         cubit.getDescription(plant.imageURL, plant.title);
                       },
-                      child: Text('More information'),
+                      child: Text(
+                        'More information',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: .w600,
+                        ),
+                      ),
                     ),
                   ],
                 ),

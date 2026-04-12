@@ -15,7 +15,7 @@ class HomeScreenCubit extends Cubit<HomeScreenState> {
     result.when(
       (success) {
         // here is when success result
-        // TODO: it should be success.plants to retrive from the model
+        // success.plants to retrieve from the model or just success if it was passed directly
         emit(HomeScreenLoadPlantsState(plants: success));
       },
       (whenError) {

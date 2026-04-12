@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:plants_recognition/core/navigation/routers.dart';
+import 'package:plants_recognition/core/theme/cubit/theme_cubit.dart';
 import 'package:plants_recognition/features/home_screen/presentation/cubit/home_screen_cubit.dart';
 import 'package:plants_recognition/features/home_screen/presentation/cubit/home_screen_state.dart';
 
@@ -13,7 +14,24 @@ class HomeScreenFeatureScreen extends StatelessWidget {
     // to trigger events
     final _ = context.read<HomeScreenCubit>();
     return Scaffold(
-      appBar: AppBar(title: const Text('Plants')),
+      appBar: AppBar(
+        title: const Text('Plants', style: TextStyle(fontSize: 24)),
+        actions: [
+          BlocBuilder<ThemeCubit, ThemeState>(
+            builder: (context, state) {
+              final isDarkMode = state.themeData.brightness == Brightness.dark;
+
+              return IconButton(
+                onPressed: () {
+                  context.read<ThemeCubit>().switchTheme();
+                },
+                icon: Icon(isDarkMode ? Icons.dark_mode : Icons.light_mode),
+                color: isDarkMode ? Colors.white : Colors.black,
+              );
+            },
+          ),
+        ],
+      ),
       body: BlocBuilder<HomeScreenCubit, HomeScreenState>(
         builder: (context, state) {
           switch (state) {
